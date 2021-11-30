@@ -1,0 +1,38 @@
+import requests
+
+test = 'c%2FScFYPduC%2B9qf0JBYGOuuOR5rEjPD%2BEptE0O%2FGKfg8c7PWHrocGDUnydUxGvRg4%2FTw2gtSNxdnJuK3aGzIOcw%3D%3D'
+temp = requests.get("http://api.gwangju.go.kr/xml/arriveInfo", params = {"serviceKey":test, "BUSSTOP_ID":'3908'})
+
+# 정류소 / 버스번호 / 현재위치 / 도착 예정 시간 / 남은 정류소 / 행선지 = 종점명
+Line_n = []  # 버스 번호
+Buss_n = []  # 현재 위치
+Remain_m = [] # 도착 예정 시간
+Remain_s = [] # 남은 정류소 수
+Dir_e = [] # 종점명 = 행선지
+
+arrivel = temp.text.split('<ARRIVE>')
+
+print("<정류소 : 문화전당역>") # id = 3908
+
+def parser(arrive, testw):
+    front = '[' + testw + ']'
+    back  = '[/' + testw + ']'
+    return arrive[arrive.find(front)+len(front):arrive.find(back)]
+
+for arrive in arrivel:
+
+   if 'LINE_NAME' in arrive:
+       print(arrive)
+       #print("버스 번호")
+       #Line_n.append(parser(arrive, 'LINE_NAME'))
+       #print("현재 위치")
+       #Buss_n.append(parser(arrive, 'BUSSTOP_NAME'))
+       #print("도착 예정 시간")
+       #Remain_m.append(parser(arrive, 'REMAIN_MIN'))
+       #print("남은 정류소 수")
+       #Remain_s.append(parser(arrive, 'REMAIN_STOP'))
+       #print("행선지")
+       #Dir_e.append(parser(arrive, 'DIR_END'))
+       print("========================================")
+   else:
+       pass
