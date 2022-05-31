@@ -53,3 +53,5 @@ jobs 명령어의 추가적인 명령어
 #### 1-4 kill 명령어
 kill 명령어 사용 사진
 ![kill](https://user-images.githubusercontent.com/95165994/171177639-fd40388d-6468-473f-af52-77219e320349.png)
+
+리눅스의 프로세스를 종료 및 강제종료 할 때 사용하는 명령어로서, 보통 ps로 종료시킬 프로세스의 PID를 얻은 후 kill [시그널] [PID] 
