@@ -8,3 +8,4 @@
 ### 1. 리눅스 명령어 : top, ps, jobs, kill 명령어 조사하기
 
 #### 1-1 top 명령어
+![top](https://user-images.githubusercontent.com/95165994/171168093-84c05081-f932-457c-aac6-cd7a64a1ca57.png)
